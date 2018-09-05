@@ -34,11 +34,12 @@ function removeFromList(array, choice) {
 
 
 function insertBoysAndGirls() {
-   // all = boys.concat(girls);
+   // all = boys.concat(girls); //smh this doesn't work, ask why
     insertList(boys, boyArea);
     insertList(girls, girlArea);
     insertList(all, allArea);
 }
+
 
 function updateAll() {
     all = boys.concat(girls);
