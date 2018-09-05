@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+p {
+    line-height: 30px;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+#container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.member-container {
+    -webkit-box-shadow: 2px -1px 31px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px -1px 31px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px -1px 31px 0px rgba(0,0,0,0.75);
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.member-name {
+
+}
+
+.member-image {
+    display: block;
+    max-width: 512px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.member-description {
+
+}
