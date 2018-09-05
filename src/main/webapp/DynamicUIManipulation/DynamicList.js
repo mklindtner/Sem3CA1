@@ -33,21 +33,29 @@ function removeFromList(array, choice) {
 }
 
 
-//find a way to update list
 function insertBoysAndGirls() {
+   // all = boys.concat(girls);
     insertList(boys, boyArea);
     insertList(girls, girlArea);
     insertList(all, allArea);
 }
 
+function updateAll() {
+    all = boys.concat(girls);
+}
+
 addBoyButton.addEventListener('click', () => {
     let userInput = document.getElementById('newboy').value;
     addElementToList(boys, userInput);
+    updateAll();
+    insertBoysAndGirls();
 });
 
 addGirlButton.addEventListener('click', () => {
     let userInput = document.getElementById('newgirl').value;
     addElementToList(girls, userInput);
+    updateAll();
+    insertBoysAndGirls();
 });
 
 removeBoyButton.addEventListener('click', () => {
@@ -57,6 +65,8 @@ removeBoyButton.addEventListener('click', () => {
         //do this since last will be defualt otherwise make else if
         removeFromList(boys, "top");
     }
+    updateAll();
+    insertBoysAndGirls();
 });
 
 removeGirlButton.addEventListener('click', () => {
@@ -65,10 +75,13 @@ removeGirlButton.addEventListener('click', () => {
     } else {
         removeFromList(girls, "top");
     }
+    updateAll();
+    insertBoysAndGirls();
 });
 
 reverseAllButton.addEventListener('click', () => {
     all.reverse();
+    updateAll();
     insertBoysAndGirls();
 });
 
@@ -83,7 +96,6 @@ sortAllButton.addEventListener('click', () => {
     });
     insertBoysAndGirls();
 });
-
 
 insertBoysAndGirls();
 
