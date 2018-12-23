@@ -2,12 +2,15 @@ var boys = ["Peter", "lars", "Ole", "ole"];
 var girls = ["Janne", "hanne", "Sanne"];
 var all = boys.concat(girls);
 var comparisonCounter = 0;
+
 const boyArea = document.querySelector("#boys");
 const girlArea = document.querySelector("#girls");
 const allArea = document.querySelector("#all");
+
 const addBoyButton = document.querySelector("#addboy");
 const addGirlButton = document.querySelector("#addgirl");
 const removeBoyButton = document.querySelector("#removeboy");
+
 const removeGirlButton = document.querySelector("#removegirl");
 const reverseAllButton = document.querySelector("#reverse");
 const sortAllButton = document.querySelector("#sort");
@@ -34,7 +37,7 @@ function removeFromList(array, choice) {
 
 
 function insertBoysAndGirls() {
-   // all = boys.concat(girls); //smh this doesn't work, ask why
+    // all = boys.concat(girls); //smh this doesn't work, ask why
     insertList(boys, boyArea);
     insertList(girls, girlArea);
     insertList(all, allArea);
@@ -52,6 +55,7 @@ addBoyButton.addEventListener('click', () => {
     insertBoysAndGirls();
 });
 
+
 addGirlButton.addEventListener('click', () => {
     let userInput = document.getElementById('newgirl').value;
     addElementToList(girls, userInput);
@@ -63,7 +67,7 @@ removeBoyButton.addEventListener('click', () => {
     if (document.getElementById('last').checked) {
         removeFromList(boys, "bot");
     } else {
-        //do this since last will be defualt otherwise make else if
+        //do this since last will be default otherwise make else if
         removeFromList(boys, "top");
     }
     updateAll();

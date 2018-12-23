@@ -18,7 +18,8 @@ buttonUserId.addEventListener('click', () => {
 });
 
 buttonAll.addEventListener('click', () => {
-    fetch('https://jsonplaceholder.typicode.com/users/').then(response => {
+    fetch('https://jsonplaceholder.typicode.com/users/')
+        .then(response => {
             return response.json();
         }
     ).then(data => {
